@@ -5,9 +5,9 @@ using System.Collections.Generic;
 
 namespace ProjectEuler
 {
-    class ProblemOne
+    public class ProblemOne
     {
-        static void Main(string[] args)
+        public static void Solve()
         {
             List<int> numbersToAdd = new List<int>();
             int sumOfNumbers = 0;
@@ -25,7 +25,7 @@ namespace ProjectEuler
                 sumOfNumbers += num;
             }
 
-            Console.WriteLine(sumOfNumbers);
+            Console.WriteLine("Sum: " + sumOfNumbers);
         }
     }
 }
