@@ -5,9 +5,12 @@ namespace ProjectEuler
     {
         static void Main(string[] args)
         {
+            ProblemThree problemThree = new ProblemThree();
             Console.Clear();
 
-            ProblemTwo.Solve();
+            //ProblemOne.Solve();
+            //ProblemTwo.Solve();
+            problemThree.Solve(600851475143, 2);
         }
     }
 }
