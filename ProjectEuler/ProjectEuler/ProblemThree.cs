@@ -9,13 +9,24 @@ namespace ProjectEuler
     {
         List<int> primeNumbers = new List<int>(){ 2 };
 
-        public void Solve(long num, int prime)
+        public void Solve(long num, int i)
         {
-            int currentPrime = GetNextPrimeNumber(prime + 1);
+            foreach (int prime in primeNumbers)
+            {
+                if (i % prime == 0)
+                {
+                    Solve(num, i + 1);
+                    return;
+                }
+            }
+            primeNumbers.Add(i);
+
+            int currentPrime = i;
 
             if (currentPrime == num)
             {
                 Console.WriteLine("The largest prime factor is: " + currentPrime);
+                return;
             }
             if (num % currentPrime == 0)
             {
@@ -25,20 +36,6 @@ namespace ProjectEuler
             {
                 Solve(num, currentPrime);
             }
-        }
-
-        int GetNextPrimeNumber(int i)
-        {
-            foreach(int prime in primeNumbers)
-            {
-                if(i % prime == 0)
-                {
-                    int returnNum = GetNextPrimeNumber(i + 1);
-                    return returnNum;
-                }
-            }
-            primeNumbers.Add(i);
-            return i;
         }
     }
 }
