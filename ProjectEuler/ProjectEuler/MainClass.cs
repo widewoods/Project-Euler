@@ -5,11 +5,11 @@ namespace ProjectEuler
     {
         static void Main(string[] args)
         {
-            ProblemFive problemFive = new ProblemFive();
+            ProblemSix problemSix = new ProblemSix();
 
             Console.Clear();
 
-            problemFive.Solve();
+            problemSix.Solve();
         }
     }
 }
