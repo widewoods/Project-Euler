@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
+//There exists exactly one Pythagorean triplet for which a + b + c = 1000.
+//Find the product abc.
+
 namespace ProjectEuler
 {
     public class ProblemNine
@@ -9,26 +12,16 @@ namespace ProjectEuler
 
         public void Solve(int sumOfTriplet)
         {
-            int a = 1, b = 2, c = 3;
-
-            for(c = 3; a+b+c <= sumOfTriplet; c++)
+            for(int a  = 3; a < sumOfTriplet; a++)
             {
-                for(b = 2; b < c; b++)
+                for(int b = a + 1; b < sumOfTriplet - 1 - a; b++)
                 {
-                    for(a = 1; a < b; a++)
+                    int c = sumOfTriplet - a - b;
+                    if(a*a + b*b == c * c)
                     {
-                        if(MathF.Pow(a, 2) + MathF.Pow(b, 2) == MathF.Pow(c, 2))
-                        {
-                            pythagoreanTriplets.Add(new int[] { a, b, c });
-                            if(a + b + c == sumOfTriplet)
-                            {
-                                Console.WriteLine("The pythagorean triplet with sum " + sumOfTriplet + " is " + a + " " + b + " " + c);
-                            }
-                        }
+                        Console.WriteLine("The pythagorean triplet with sum " + sumOfTriplet + " is " + a + " " + b + " " + c);
                     }
                 }
-                b = 2;
-                a = 1;
             }
         }
     }
