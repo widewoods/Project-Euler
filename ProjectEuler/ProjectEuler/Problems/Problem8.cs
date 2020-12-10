@@ -5,7 +5,7 @@ What is the value of this product? */
 
 namespace ProjectEuler
 {
-    public class ProblemEight
+    public class Problem8
     {
         public void Solve(string number, int digitsToSlice)
         {

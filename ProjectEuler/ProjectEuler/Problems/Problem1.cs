@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace ProjectEuler
 {
-    public class ProblemOne
+    public class Problem1
     {
         public static void Solve()
         {

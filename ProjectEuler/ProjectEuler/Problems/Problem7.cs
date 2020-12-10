@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace ProjectEuler
 {
-    public class ProblemSeven
+    public class Problem7
     {
         /* 1 is not a prime
          * All primes except 2 are odd

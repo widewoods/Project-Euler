@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace ProjectEuler
 {
-    public class ProblemNine
+    public class Problem9
     {
         List<int[]> pythagoreanTriplets = new List<int[]>();
 

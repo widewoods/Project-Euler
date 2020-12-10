@@ -5,7 +5,7 @@
 
 namespace ProjectEuler
 {
-    public class ProblemFour
+    public class Problem4
     {
 
         public void Solve()

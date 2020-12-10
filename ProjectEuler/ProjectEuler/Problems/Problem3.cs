@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace ProjectEuler
 {
-    public class ProblemThree
+    public class Problem3
     {
         List<int> primeNumbers = new List<int>(){ 2 };
 

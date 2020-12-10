@@ -5,7 +5,7 @@ namespace ProjectEuler
     {
         static void Main(string[] args)
         {
-            ProblemSeven problem = new ProblemSeven();
+            Problem7 problem = new Problem7();
 
             Console.Clear();
 
