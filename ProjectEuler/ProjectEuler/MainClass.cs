@@ -9,13 +9,13 @@ namespace ProjectEuler
         {
             Stopwatch sw = new Stopwatch();
 
-            Problem14 problem = new Problem14();
+            Problem15 problem = new Problem15();
 
             Console.Clear();
 
             sw.Restart();
 
-            problem.FindStartNumWithLargestSteps(1000000);
+            problem.Solve(20, 20);
 
             sw.Stop();
 
