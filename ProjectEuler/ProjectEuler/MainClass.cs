@@ -9,13 +9,13 @@ namespace ProjectEuler
         {
             Stopwatch sw = new Stopwatch();
 
-            Problem15 problem = new Problem15();
+            Problem16 problem = new Problem16();
 
             Console.Clear();
 
             sw.Restart();
 
-            problem.Solve(20, 20);
+            problem.Solve(1000);
 
             sw.Stop();
 
