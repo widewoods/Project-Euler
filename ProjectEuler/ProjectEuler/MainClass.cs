@@ -9,15 +9,15 @@ namespace ProjectEuler
         {
             Stopwatch sw = new Stopwatch();
 
-            Problem16 problem = new Problem16();
+            Problem17 problem = new Problem17();
 
             Console.Clear();
 
             sw.Restart();
 
-            problem.Solve(1000);
+            problem.Solve();
 
-            sw.Stop();
+            sw.Stop(); 
 
             Console.WriteLine("\nTime Elapsed: " + sw.ElapsedMilliseconds + "ms");
         }
