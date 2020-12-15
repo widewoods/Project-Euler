@@ -10,7 +10,7 @@ namespace ProjectEuler
         {
             Stopwatch sw = new Stopwatch();
 
-            Problem21 problem = new Problem21();
+            Problem22 problem = new Problem22();
 
             Console.Clear();
 
