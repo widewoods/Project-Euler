@@ -10,13 +10,17 @@ namespace ProjectEuler
         {
             Stopwatch sw = new Stopwatch();
 
-            Problem23 problem = new Problem23();
+            Problem24 problem = new Problem24();
 
             Console.Clear();
 
             sw.Restart();
 
-            problem.Solve();
+           List<string> digits = new List<string>() { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+
+            List<string> permutations = problem.Permutate(digits);
+
+            Console.WriteLine(permutations[999999]);
 
             sw.Stop(); 
 
