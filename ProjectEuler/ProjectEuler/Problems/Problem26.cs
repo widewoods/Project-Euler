@@ -72,49 +72,5 @@ namespace ProjectEuler
 
             return decimals;
         }
-
-        //List<int> CheckRepeat(List<int> decimals)
-        //{
-        //    int startingDecimal = decimals[0];
-
-        //    int count = 0;
-
-        //    List<int> repetend = new List<int>();
-
-        //    for(int i = 1; i < decimals.Count; i++)
-        //    {
-        //        if(decimals[i] == startingDecimal)
-        //        {
-        //            for(int j = 0; j < decimals.Count - i; j++)
-        //            {
-        //                if(decimals[j] == decimals[j + i])
-        //                {
-        //                    count++;
-        //                }
-        //                else
-        //                {
-        //                    repetend.Clear();
-        //                    count = 0;
-        //                    break;
-        //                }
-        //            }
-
-        //            if (count == decimals.Count - i)
-        //            {
-        //                for(int j = 0; j < i; j++)
-        //                {
-        //                    repetend.Add(decimals[j]);
-        //                }
-        //                break;
-        //            }
-        //        }
-        //    }
-        //    if(repetend.Count == 0)
-        //    {
-        //        repetend = decimals;
-        //    }
-
-        //    return repetend;
-        //}
     }
 }
