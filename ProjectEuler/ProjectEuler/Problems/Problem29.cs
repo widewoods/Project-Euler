@@ -21,12 +21,26 @@ namespace ProjectEuler
 
         public void Solve()
         {
-            List<int> digits = math.LargePower(2, 20);
+            List<string> distintTerms = new List<string>();
 
-            for(int i = digits.Count - 1; i >= 0; i--)
+            for(int a = 2; a <= 100; a++)
             {
-                Console.Write(digits[i]);
+                for(int b = 2; b <= 100; b++)
+                {
+                    List<int> digits = math.LargePower(a, b);
+                    string digitsToString = String.Empty;
+                    for (int i = digits.Count - 1; i >= 0; i--)
+                    {
+                        digitsToString += digits[i];
+                    }
+                    if (!distintTerms.Contains(digitsToString))
+                    {
+                        distintTerms.Add(digitsToString);
+                    }
+                }
             }
+
+            Console.Write(distintTerms.Count);
         }
     }
 }
