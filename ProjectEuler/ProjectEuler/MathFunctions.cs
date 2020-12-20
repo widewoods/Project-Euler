@@ -67,5 +67,41 @@ namespace ProjectEuler
 
             return primes;
         }
+
+        public List<int> LargePower(int a, int b)
+        {
+            List<int> digits = new List<int>() { 1 };
+            int carry = 0;
+            int product;
+
+            for(int i = 0; i < b; i++)
+            {
+                int digitCount = digits.Count;
+                for(int j = 0; j < digitCount; j++)
+                {
+                    product = digits[j] * a + carry;
+                    if(product >= 100)
+                    {
+                        if (j == digitCount - 1)
+                        {
+                            digits.Add(product / 10 % 10);
+                            digits.Add(product / 100);
+                        }
+                    }
+                    else if(product >= 10)
+                    {
+                        if(j == digitCount - 1)
+                        {
+                            digits.Add(product / 10);
+                        }
+                    }
+                    carry = product / 10;
+                    digits[j] = product % 10;
+                }
+                carry = 0;
+            }
+
+            return digits;
+        }
     }
 }
