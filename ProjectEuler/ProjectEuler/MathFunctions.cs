@@ -103,5 +103,34 @@ namespace ProjectEuler
 
             return digits;
         }
+
+        public List<string> Permutate(List<string> digits)
+        {
+            List<string> returnList = new List<string>();
+            if (digits.Count > 2)
+            {
+                foreach (string str in digits)
+                {
+                    List<string> newDigits = new List<string>();
+                    newDigits.AddRange(digits);
+                    newDigits.Remove(str);
+
+                    List<string> permutatedList = new List<string>();
+                    permutatedList.AddRange(Permutate(newDigits));
+
+                    foreach (string permutation in permutatedList)
+                    {
+                        returnList.Add(str + permutation);
+                    }
+                }
+                return returnList;
+            }
+            else if (digits.Count == 2)
+            {
+                List<string> permutated = new List<string>() { digits[0] + digits[1], digits[1] + digits[0] };
+                return permutated;
+            }
+            return null;
+        }
     }
 }
