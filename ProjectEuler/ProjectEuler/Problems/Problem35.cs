@@ -44,6 +44,17 @@ namespace ProjectEuler
                 }
             }
 
+            foreach(int digit in digits)
+            {
+                if(digitCount > 1)
+                {
+                    if (digit % 2 == 0 || digit % 5 == 0)
+                    {
+                        return false;
+                    }
+                }
+            }
+
             int[] cycledNumbers = new int[digitCount];
 
             for(int i = 0; i < digitCount; i++)
