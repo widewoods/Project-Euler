@@ -25,7 +25,7 @@ namespace ProjectEuler
             int sum = 0;
             foreach(int p in palindromicInDecimal)
             {
-                string binary = Convert.ToString(p, 2);
+                string binary = ConvertToBinary(p);
                 if (isPalindromic(binary))
                 {
                     sum += p;
@@ -60,6 +60,21 @@ namespace ProjectEuler
             {
                 return false;
             }
+        }
+
+        string ConvertToBinary(int num)
+        {
+            string binary = string.Empty;
+
+            const int mask = 1;
+
+            while(num > 0)
+            {
+                binary = (num & mask) + binary;
+                num = num >> 1;
+            }
+
+            return binary;
         }
     }
 }
