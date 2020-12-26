@@ -17,8 +17,6 @@ namespace ProjectEuler
 {
     public class Problem29
     {
-        MathFunctions math = new MathFunctions();
-
         public void Solve()
         {
             List<string> distintTerms = new List<string>();
@@ -27,7 +25,7 @@ namespace ProjectEuler
             {
                 for(int b = 2; b <= 100; b++)
                 {
-                    List<int> digits = math.LargePower(a, b);
+                    List<int> digits = MathFunctions.LargePower(a, b);
                     string digitsToString = String.Empty;
                     for (int i = digits.Count - 1; i >= 0; i--)
                     {

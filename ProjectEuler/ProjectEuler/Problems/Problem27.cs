@@ -27,11 +27,9 @@ namespace ProjectEuler
 {
     public class Problem27
     {
-        MathFunctions math = new MathFunctions();
-
         public void Solve()
         {
-            List<int> primes = math.GetPrimesUnderLimit(1000);
+            List<int> primes = MathFunctions.GetPrimesUnderLimit(1000);
             int a, b;
 
             int largest_a = 0, largest_b = 0;

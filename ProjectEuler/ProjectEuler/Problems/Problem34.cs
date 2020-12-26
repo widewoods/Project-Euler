@@ -11,8 +11,6 @@ namespace ProjectEuler
 {
     public class Problem34
     {
-        MathFunctions math = new MathFunctions();
-
         int sum = 0;
         int sumOfDigitFactorial = 0;
 
@@ -45,7 +43,7 @@ namespace ProjectEuler
         {
             for(int i = 0; i < 10; i++)
             {
-                factorialValues.Add(i, math.Factorial(i));
+                factorialValues.Add(i, MathFunctions.Factorial(i));
             }
         }
     }

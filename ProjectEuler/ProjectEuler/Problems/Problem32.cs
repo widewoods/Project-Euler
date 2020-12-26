@@ -18,14 +18,12 @@ namespace ProjectEuler
         List<string> set = new List<string>() { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
         List<int> pandigitalNums = new List<int>();
 
-        MathFunctions math = new MathFunctions();
-
         public void Solve()
         {
             int multiplicand, multiplier, product;
             int sum = 0;
 
-            List<string> permutations = math.Permutate(set);
+            List<string> permutations = MathFunctions.Permutate(set);
 
             foreach (string p in permutations)
             {

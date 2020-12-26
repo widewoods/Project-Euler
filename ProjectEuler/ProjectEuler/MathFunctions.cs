@@ -5,7 +5,7 @@ namespace ProjectEuler
 {
     public class MathFunctions
     {
-        bool isPrime(int num)
+        public static bool isPrime(int num)
         {
             if (num == 1)
             {
@@ -49,7 +49,7 @@ namespace ProjectEuler
             return true;
         }
 
-        public List<int> GetPrimesUnderLimit(int limit)
+        public static List<int> GetPrimesUnderLimit(int limit)
         {
             int count = 1;
             int candidate = 1;
@@ -68,7 +68,7 @@ namespace ProjectEuler
             return primes;
         }
 
-        public List<int> LargePower(int a, int b)
+        public static List<int> LargePower(int a, int b)
         {
             List<int> digits = new List<int>() { 1 };
             int carry = 0;
@@ -104,7 +104,7 @@ namespace ProjectEuler
             return digits;
         }
 
-        public List<string> Permutate(List<string> digits)
+        public static List<string> Permutate(List<string> digits)
         {
             List<string> returnList = new List<string>();
             if (digits.Count > 2)
@@ -133,7 +133,7 @@ namespace ProjectEuler
             return null;
         }
 
-        public int Factorial(int n)
+        public static int Factorial(int n)
         {
             if(n == 0)
             {

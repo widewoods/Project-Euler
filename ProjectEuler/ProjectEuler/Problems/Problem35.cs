@@ -11,13 +11,12 @@ namespace ProjectEuler
 {
     public class Problem35
     {
-        MathFunctions math = new MathFunctions();
         List<int> primes;
 
         public void Solve()
         {
             int count = 0;
-            primes = math.GetPrimesUnderLimit(1000000);
+            primes = MathFunctions.GetPrimesUnderLimit(1000000);
 
             foreach(int prime in primes)
             {
