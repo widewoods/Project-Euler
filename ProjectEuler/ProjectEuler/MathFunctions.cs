@@ -149,5 +149,22 @@ namespace ProjectEuler
 
             return factorial;
         }
+
+        public static int[] IntToDigitArray(int num)
+        {
+            int digitCount = (int)MathF.Round(MathF.Log10(num) - 0.5f) + 1;
+            int[] digits = new int[digitCount];
+
+            for(int i = 0; i < digitCount; i++)
+            {
+                digits[i] = num % 10;
+                if(num > 9)
+                {
+                    num = num / 10;
+                }
+            }
+
+            return digits;
+        }
     }
 }
