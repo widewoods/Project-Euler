@@ -166,5 +166,19 @@ namespace ProjectEuler
 
             return digits;
         }
+
+        //Greatest Common Divisor, from https://stackoverflow.com/questions/18541832/c-sharp-find-the-greatest-common-divisor
+        public static int GCD(int a, int b)
+        {
+            while (a != 0 && b != 0)
+            {
+                if (a > b)
+                    a %= b;
+                else
+                    b %= a;
+            }
+
+            return a | b;
+        }
     }
 }
