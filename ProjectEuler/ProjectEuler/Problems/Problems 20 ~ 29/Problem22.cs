@@ -15,7 +15,7 @@ namespace ProjectEuler
 {
     public class Problem22
     {
-        string text = System.IO.File.ReadAllText(@"/Users/widewoods/Desktop/p022_names.txt");
+        string text = System.IO.File.ReadAllText(@"/Users/widewoods/Documents/GitHub/Project-Euler/ProjectEuler/ProjectEuler/p022_names.txt");
 
         public void Solve()
         {
