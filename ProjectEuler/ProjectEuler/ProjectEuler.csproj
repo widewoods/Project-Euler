@@ -7,5 +7,10 @@
 
   <ItemGroup>
     <Folder Include="Problems\" />
+    <Folder Include="Problems\Problems 1~9\" />
+    <Folder Include="Problems\Problems 10 ~ 19\" />
+    <Folder Include="Problems\Problems 20 ~ 29\" />
+    <Folder Include="Problems\Problems 30 ~ 39\" />
+    <Folder Include="Problems\Problems 40 ~ 49\" />
   </ItemGroup>
 </Project>
