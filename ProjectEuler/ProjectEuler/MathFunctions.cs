@@ -152,7 +152,7 @@ namespace ProjectEuler
 
         public static int[] IntToDigitArray(int num)
         {
-            int digitCount = (int)MathF.Round(MathF.Log10(num) - 0.5f) + 1;
+            int digitCount = (int)MathF.Floor(MathF.Log10(num)) + 1;
             int[] digits = new int[digitCount];
 
             for(int i = 0; i < digitCount; i++)
