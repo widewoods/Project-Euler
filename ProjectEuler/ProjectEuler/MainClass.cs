@@ -10,13 +10,22 @@ namespace ProjectEuler
         {
             Stopwatch sw = new Stopwatch();
 
-            Problem41 problem = new Problem41();
+            Problem42 problem = new Problem42();
 
             Console.Clear();
 
             sw.Restart();
 
-            problem.Solve();
+            string text = System.IO.File.ReadAllText(@"/Users/widewoods/Documents/GitHub/Project-Euler/ProjectEuler/ProjectEuler/p042_words.txt");
+
+            string[] words = text.Split(",");
+
+            for(int i = 0; i < words.Length; i++)
+            {
+                words[i] = words[i].Replace("\"", "");
+            }
+
+            problem.Solve(words);
 
             sw.Stop(); 
 
