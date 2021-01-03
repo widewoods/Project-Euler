@@ -10,13 +10,18 @@ namespace ProjectEuler
         {
             Stopwatch sw = new Stopwatch();
 
-            Problem50 problem = new Problem50();
+            Problem59 problem = new Problem59();
 
             Console.Clear();
 
             sw.Restart();
 
-            problem.Solve();
+            string filePath = @"/Users/widewoods/Documents/GitHub/Project-Euler/ProjectEuler/ProjectEuler/p059_cipher.txt";
+            string text = System.IO.File.ReadAllText(filePath);
+
+            text = text.Replace(",", " ");
+
+            problem.Solve(text);
 
             sw.Stop(); 
 
