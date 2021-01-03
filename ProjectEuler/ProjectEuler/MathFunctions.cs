@@ -68,35 +68,30 @@ namespace ProjectEuler
             return primes;
         }
 
-        public static List<int> LargePower(int a, int b)
+        public static List<int> LargePower(int @base, int exponent)
         {
             List<int> digits = new List<int>() { 1 };
             int carry = 0;
             int product;
 
-            for(int i = 0; i < b; i++)
+            for(int i = 0; i < exponent; i++)
             {
                 int digitCount = digits.Count;
                 for(int j = 0; j < digitCount; j++)
                 {
-                    product = digits[j] * a + carry;
-                    if(product >= 100)
+                    product = digits[j] * @base + carry;
+
+                    int temp = product % 10;
+                    if(j == digitCount - 1)
                     {
-                        if (j == digitCount - 1)
+                        while (product >= 10)
                         {
                             digits.Add(product / 10 % 10);
-                            digits.Add(product / 100);
-                        }
-                    }
-                    else if(product >= 10)
-                    {
-                        if(j == digitCount - 1)
-                        {
-                            digits.Add(product / 10);
+                            product = product / 10;
                         }
                     }
                     carry = product / 10;
-                    digits[j] = product % 10;
+                    digits[j] = temp;
                 }
                 carry = 0;
             }
@@ -179,6 +174,43 @@ namespace ProjectEuler
             }
 
             return a | b;
+        }
+
+        public static List<int> AddLargeInt(List<int> a, List<int> b)
+        {
+            List<int> sumList = new List<int>();
+            while(a.Count != b.Count)
+            {
+                if(a.Count > b.Count)
+                {
+                    b.Add(0);
+                }
+                else
+                {
+                    a.Add(0);
+                }
+            }
+
+            int carry = 0;
+            for(int i = 0; i < a.Count; i++)
+            {
+                int sum = a[i] + b[i] + carry;
+                if(sum >= 10)
+                {
+                    carry = 1;
+                }
+                else
+                {
+                    carry = 0;
+                }
+                sumList.Add(sum % 10);
+            }
+            if(carry == 1)
+            {
+                sumList.Add(1);
+            }
+
+            return sumList;
         }
     }
 }
