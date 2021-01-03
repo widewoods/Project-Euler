@@ -12,5 +12,6 @@
     <Folder Include="Problems\Problems 20 ~ 29\" />
     <Folder Include="Problems\Problems 30 ~ 39\" />
     <Folder Include="Problems\Problems 40 ~ 49\" />
+    <Folder Include="Problems\Problems 50 ~ 59\" />
   </ItemGroup>
 </Project>
