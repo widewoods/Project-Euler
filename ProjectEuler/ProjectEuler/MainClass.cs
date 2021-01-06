@@ -10,46 +10,24 @@ namespace ProjectEuler
         {
             Stopwatch sw = new Stopwatch();
 
-            Problem96 problem = new Problem96();
+            Problem54 problem = new Problem54();
 
             Console.Clear();
 
             sw.Restart();
 
-            string filePath = @"/Users/widewoods/Documents/GitHub/Project-Euler/ProjectEuler/ProjectEuler/p096_sudoku.txt";
-            string[] text = System.IO.File.ReadAllLines(filePath);
-
-            for(int i = 0; i < text.Length; i++)
-            {
-                text[i] = text[i].Trim();
-            }
-
-            List<string[,]> puzzles = new List<string[,]>();
-
-            for(int i = 0; i < 50; i++)
-            {
-                puzzles.Add(new string[9, 9]);
-                for(int j = 0; j < 9; j++)
-                {
-                    for(int k = 0; k < 9; k++)
-                    {
-                        puzzles[i][k, j] = text[10 * i + 1 + j][k].ToString();
-                    }
-                }
-            }
+            string filePath = @"/Users/widewoods/Documents/GitHub/Project-Euler/ProjectEuler/ProjectEuler/p054_poker.txt";
+            string[] hands = System.IO.File.ReadAllLines(filePath);
 
             int sum = 0;
-            for(int i = 0; i < 50; i++)
+            for(int i = 0; i < hands.Length; i++)
             {
-                string[,] solved = problem.Solve(puzzles[i]);
-                string topLeft = "";
+                string[] hand = hands[i].Split(" ");
 
-                for(int j = 0; j < 3; j++)
+                if(problem.Winner(hand) == 1)
                 {
-                    topLeft = topLeft + solved[j, 0];
+                    sum++;
                 }
-
-                sum += int.Parse(topLeft);
             }
 
             Console.Write(sum);
