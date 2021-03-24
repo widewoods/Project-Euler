@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Collections.Generic;
 
 //Problem: https://projecteuler.net/problem=51
 
@@ -9,49 +10,38 @@ namespace ProjectEuler
     {
         public void Solve()
         {
-            int target = 8;
+            int target = 7;
             bool found = false;
-            int i = 0;
+            int i = 11;
+            
             while (!found)
             {
                 int lastDigit = i % 10;
                 int numLength = (int)MathF.Floor(MathF.Log10(i)) + 1;
 
-                int[] digitsToReplace;
-
-                for (int j = 1; j < numLength; j++)
-                {
-                    digitsToReplace = new int[j];
-                    for(int k = 1; k <= numLength - j; k++)
-                    {
-                        for(int a = 0; a < j; a++)
-                        {
-                            digitsToReplace[a] = k + a;
-
-                            int count = 0;
-                            if (lastDigit == 1 || lastDigit == 3 || lastDigit == 7 || lastDigit == 9)
-                            {
-                                int[] replacements = GetReplacements(i, digitsToReplace);
-                                foreach (int n in replacements)
-                                {
-                                    if (MathFunctions.isPrime(n))
-                                    {
-                                        count++;
-                                    }
-                                }
-                                if (count == target)
-                                {
-                                    Console.WriteLine(i);
-                                    found = true;
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                }
-
-                i++;
+                i += 2;
             }
+
+            //if (lastDigit == 1 || lastDigit == 3 || lastDigit == 7 || lastDigit == 9)
+            //{
+            //    int count = 0;
+
+            //    int[] replacements = GetReplacements(i, digitsToReplace);
+
+            //    foreach (int n in replacements)
+            //    {
+            //        if (MathFunctions.isPrime(n))
+            //        {
+            //            count++;
+            //        }
+            //    }
+            //    if (count == target)
+            //    {
+            //        Console.WriteLine(i);
+            //        found = true;
+            //        break;
+            //    }
+            //}
         }
 
         private int[] GetReplacements(int number, int[] digitsToReplace)
